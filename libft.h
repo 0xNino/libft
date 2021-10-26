@@ -15,6 +15,14 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+
+typedef struct s_list {
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}	t_list;
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
