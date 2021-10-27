@@ -14,5 +14,31 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	
+	if (src < dst)
+	{
+		dst += len;
+		while (src < src + len--)
+		{
+			*(unsigned char *)--dst = *(unsigned char *)--src;
+		}
+	}
+	else
+		while (len--)
+			*(unsigned char *) dst++ = *(unsigned char *) src++;
+	return (dst);
+}
+
+int	main(void)
+{
+	char	str[100] = "Learningisfun";
+	char	*first, *second;
+
+	first = str;
+	second = str;
+	printf("Original string :%s\n ", str);
+	memcpy(first + 8, first, 10);
+	printf("memcpy overlap : %s\n ", str);
+	ft_memmove(second + 8, first, 10);
+	printf("ft_memmove overlap : %s\n ", str);
+	return (0);
 }
