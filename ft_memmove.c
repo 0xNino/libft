@@ -14,17 +14,22 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (src < dst)
+	unsigned char		*pd;
+	const unsigned char	*ps;
+
+	pd = dst;
+	ps = src;
+	if (!pd || !ps)
+		return (NULL);
+	if (pd < ps)
 	{
-		dst += len;
-		while (src < src + len--)
-		{
-			*(unsigned char *)--dst = *(unsigned char *)--src;
-		}
+		pd += len;
+		while (len--)
+			*--pd = *--ps;
 	}
 	else
 		while (len--)
-			*(unsigned char *) dst++ = *(unsigned char *) src++;
+			*pd++ = *ps++;
 	return (dst);
 }
 /*
@@ -35,7 +40,7 @@ int	main(void)
 
 	first = str;
 	second = str;
-	printf("Original string :%s\n ", str);
+	printf("Original string : %s\n ", str);
 	memcpy(first + 8, first, 10);
 	printf("memcpy overlap : %s\n ", str);
 	ft_memmove(second + 8, first, 10);
