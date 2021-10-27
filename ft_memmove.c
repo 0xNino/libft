@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*(unsigned char *) dst++ = *(unsigned char *) src++;
 	return (dst);
 }
-
+/*
 int	main(void)
 {
 	char	str[100] = "Learningisfun";
@@ -42,3 +42,4 @@ int	main(void)
 	printf("ft_memmove overlap : %s\n ", str);
 	return (0);
 }
+*/
