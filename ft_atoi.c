@@ -20,41 +20,30 @@ int static	ft_isspace(char c)
 		return (0);
 }
 
-int static	signe(int neg, int i)
-{
-	if (neg % 2 == 0)
-	{	
-		return (i);
-	}
-	else
-	{
-		return (i * -1);
-	}
-}
-
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	neg;
+	int	sign;
 
 	i = 0;
 	neg = 0;
+	sign = 0;
 	while (*str && (ft_isspace(*str)))
-	{
 		str++;
-	}
 	while (*str && (*str == '+' || *str == '-'))
 	{
 		if (*str == '-')
-		{
 			neg++;
-		}
+		sign++;
 		str++;
 	}
 	while ('0' <= *str && *str <= '9')
-	{
-		i = i * 10 + (int) *str - '0';
-		str++;
-	}
-	return (signe(neg, i));
+		i = i * 10 + (int) *str++ - '0';
+	if (sign > 1)
+		return (0);
+	if (neg == 1)
+		return (i * -1);
+	else
+		return (i);
 }
