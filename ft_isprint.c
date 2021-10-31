@@ -12,9 +12,5 @@
 
 int	ft_isprint(int c)
 {
-<<<<<<< HEAD
-	return (32 <= c && c <= 127);
-=======
 	return (32 <= c && c <= 126);
->>>>>>> 6b587fb6360cd093928b48282c65dc8861bcfbaa
 }

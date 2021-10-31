@@ -14,10 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-<<<<<<< HEAD
-	
-}
-=======
 	unsigned int	i;
 
 	i = 0;
@@ -96,4 +92,3 @@ int	main(void)
 	return (0);
 }
 */
->>>>>>> 6b587fb6360cd093928b48282c65dc8861bcfbaa
