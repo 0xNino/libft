@@ -18,6 +18,12 @@
 # include <stdlib.h>
 # include <string.h>
 
+# define FT_INT_MIN			(-2147483648)
+# define FT_INT_MAX			(2147483647)
+# define FT_LONG_MIN		(-9223372036854775808)
+# define FT_LONG_MAX		(9223372036854775807)
+# define FT_ULONG_MAX		(18446744073709551615)
+
 typedef struct s_list {
 	void			*content;
 	size_t			content_size;
