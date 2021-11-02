@@ -16,10 +16,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (calloc(1, sizeof(char)));
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
-	s += start;
-	ft_strlcpy(sub, s, len + 1);
+	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
