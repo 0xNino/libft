@@ -14,7 +14,7 @@
 
 int	ft_intlen(int n)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (n <= 0)
