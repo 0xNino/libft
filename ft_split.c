@@ -49,22 +49,43 @@ size_t	ft_substrlen(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int		wordcount;
+	int		strcount;
 	int		index;
 
-	index = 0;
+	strcount = ft_strcount(s, c);
 	arr = (char **) malloc(sizeof(*arr) * (ft_strcount(s, c) + 1));
 	if (!arr)
 		return (NULL);
+	index = 0;
+	while (strcount--)
+	{
+		while (*s && *s == c)
+			s++;
+		arr[index] = ft_substr(s, 0, ft_substrlen(s, c));
+		if (!arr[index])
+			return (NULL);
+		s = s + ft_substrlen(s, c);
+		index++;
+	}
+	return (arr);
 }
-
-
+/*
 int	main(void)
 {
 	char	s[100];
+	size_t	i;
+	char	c;
 
-	ft_strlcpy(s, "_1__2222_333___4_5555__66_7_88__99999___", 100);
-	printf("strcount = %lu\n", ft_strcount(s, '_'));
-	printf("splitlen = %lu\n", ft_substrlen(s + 4, '_'));
+	i = 0;
+	c = ' ';
+	ft_strlcpy(s, "      split       this for   me  !       ", 100);
+	printf("strcount = %lu\n", ft_strcount(s, c));
+	while (i < ft_strcount(s, c))
+	{
+		printf("{%s}, ", ft_split(s, c)[i]);
+		i++;
+	}
+	printf("\n");
 	return (0);
 }
+*/
