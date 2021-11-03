@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 16:02:54 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/10/29 16:02:55 by 0xNino          ###   ########.fr       */
+/*   Created: 2021/11/03 11:38:45 by 0xNino           #+#    #+#             */
+/*   Updated: 2021/11/03 11:38:46 by 0xNino          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+size_t	ft_intlen(size_t n)
 {
-	char	*ptr;
-	size_t	bytes;
 	size_t	i;
 
-	bytes = count * size;
-	ptr = malloc(bytes);
-	if (!ptr)
-		return (NULL);
 	i = 0;
-	while (bytes--)
-		ptr[i++] = 0;
-	return ((void *)ptr);
+	if (n <= 0)
+	{
+		n *= -1;
+		i++;
+	}
+	while (n)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
