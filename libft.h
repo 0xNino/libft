@@ -43,9 +43,9 @@ int		ft_atoi(const char *str);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_max(int x, int y);
 int		ft_min(int x, int y);
+int		ft_intlen(int n);
 
 size_t	ft_strlen(const char *str);
-size_t	ft_intlen(size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
