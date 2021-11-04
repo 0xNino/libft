@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 0xNino <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:01:30 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/11/03 14:01:32 by 0xNino          ###   ########.fr       */
+/*   Updated: 2021/11/04 23:14:51 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strcount(char const *s, char c)
+static size_t	ft_substrcount(char const *s, char c)
 {
 	size_t	count;
 	int		in_substr;
@@ -33,7 +33,7 @@ size_t	ft_strcount(char const *s, char c)
 	return (count);
 }
 
-size_t	ft_substrlen(char const *s, char c)
+static size_t	ft_substrlen(char const *s, char c)
 {
 	size_t	len;
 
@@ -54,8 +54,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	strcount = ft_strcount(s, c);
-	arr = (char **) malloc(sizeof(*arr) * (ft_strcount(s, c) + 1));
+	strcount = ft_substrcount(s, c);
+	arr = (char **) malloc(sizeof(*arr) * (ft_substrcount(s, c) + 1));
 	if (!arr)
 		return (NULL);
 	index = 0;
@@ -82,8 +82,8 @@ int	main(void)
 	i = 0;
 	c = ' ';
 	ft_strlcpy(s, "      split       this for   me  !       ", 100);
-	printf("strcount = %lu\n", ft_strcount(s, c));
-	while (i < ft_strcount(s, c))
+	printf("strcount = %lu\n", ft_substrcount(s, c));
+	while (i < ft_substrcount(s, c))
 	{
 		printf("{%s}, ", ft_split(s, c)[i]);
 		i++;
@@ -92,4 +92,3 @@ int	main(void)
 	return (0);
 }
 */
-
