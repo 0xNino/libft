@@ -52,6 +52,8 @@ char	**ft_split(char const *s, char c)
 	int		strcount;
 	int		index;
 
+	if (!s)
+		return (NULL);
 	strcount = ft_strcount(s, c);
 	arr = (char **) malloc(sizeof(*arr) * (ft_strcount(s, c) + 1));
 	if (!arr)
@@ -67,6 +69,7 @@ char	**ft_split(char const *s, char c)
 		s = s + ft_substrlen(s, c);
 		index++;
 	}
+	arr[index] = NULL;
 	return (arr);
 }
 /*
@@ -89,3 +92,4 @@ int	main(void)
 	return (0);
 }
 */
+
