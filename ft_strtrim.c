@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 0xNino <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:27:14 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/11/02 14:27:16 by 0xNino          ###   ########.fr       */
+/*   Updated: 2021/11/05 17:46:29 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (ft_strchr(set, *s1) && *s1)
 		s1++;
-	if (!s1)
+	if (!*s1)
 		return (ft_strdup(""));
 	len = ft_strlen(s1);
 	while (ft_strchr(set, s1[len]))
