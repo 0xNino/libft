@@ -6,12 +6,12 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino           #+#    #+#              #
-#    Updated: 2021/11/09 18:42:09 by 0xNino           ###   ########.fr        #
+#    Updated: 2021/11/10 13:42:20 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
-					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c \
+					ft_strlcat.c ft_strncmp.c ft_substr.c ft_atoi.c ft_isalpha.c ft_substr.c \
 					ft_itoa.c ft_memcpy.c ft_putendl_fd.c ft_strchr.c   ft_strlcpy.c \
 					ft_strnstr.c ft_tolower.c ft_bzero.c  ft_isascii.c  ft_intlen.c \
 					ft_memmove.c ft_putnbr_fd.c ft_strdup.c ft_strlen.c ft_strrchr.c \
