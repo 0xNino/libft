@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:01:30 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/11/04 23:14:51 by 0xNino           ###   ########.fr       */
+/*   Updated: 2021/11/12 17:12:05 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,23 +72,3 @@ char	**ft_split(char const *s, char c)
 	arr[index] = NULL;
 	return (arr);
 }
-/*
-int	main(void)
-{
-	char	s[100];
-	size_t	i;
-	char	c;
-
-	i = 0;
-	c = ' ';
-	ft_strlcpy(s, "      split       this for   me  !       ", 100);
-	printf("strcount = %lu\n", ft_substrcount(s, c));
-	while (i < ft_substrcount(s, c))
-	{
-		printf("{%s}, ", ft_split(s, c)[i]);
-		i++;
-	}
-	printf("\n");
-	return (0);
-}
-*/

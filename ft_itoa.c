@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:56:25 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/11/12 16:43:40 by 0xNino           ###   ########.fr       */
+/*   Updated: 2021/11/12 17:10:49 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-		printf("%s\n", ft_itoa(atoi(argv[1])));
-	return (0);
-}
-*/

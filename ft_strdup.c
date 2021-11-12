@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 0xNino <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 15:04:36 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/10/28 15:04:38 by 0xNino          ###   ########.fr       */
+/*   Updated: 2021/11/12 17:12:11 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ char	*ft_strdup(const char *s1)
 	dst[i] = '\0';
 	return (dst);
 }
-/*
-int main (int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		char *s1 = argv[1];
-		char *dst = ft_strdup(s1);
-		printf("%s\n", s1);
-		printf("%s\n", dst);
-	}
-	return (0);
-}
-*/
