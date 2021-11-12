@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:29:21 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/11/05 15:36:48 by 0xNino           ###   ########.fr       */
+/*   Updated: 2021/11/10 17:05:34 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start >= ft_strlen(s))
 	{
-		sub = calloc(1, sizeof(char));
+		sub = ft_calloc(1, sizeof(char));
 		if (!sub)
 			return (NULL);
 		return (sub);
