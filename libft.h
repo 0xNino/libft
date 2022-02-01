@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/02 00:23:03 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/02 00:50:10 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,6 @@ void	ft_putnbr(int n);
 void	ft_putnbr_base(int nbr, char *base);
 int		ft_intlen(int n);
 void	ft_free_ptr(void **ptr);
+void	ft_loop(void);
 
 #endif
