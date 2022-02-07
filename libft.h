@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/04 15:16:20 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/07 14:26:35 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdarg.h>
+# include <sys/types.h> 
+# include <sys/stat.h> 
+# include <fcntl.h>
 
 # define FT_INT_MIN			(-2147483648)
 # define FT_INT_MAX			(2147483647)
@@ -81,6 +84,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+// Additional functions
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
@@ -91,5 +95,12 @@ void	ft_loop(void);
 int		ft_abs(int a);
 int		ft_max(int a, int b);
 int		ft_min(int a, int b);
+
+// GNL
+char	*get_next_line(int fd);
+char	*ft_read_reminder(int fd, char *reminder);
+char	*ft_get_line(char *reminder);
+char	*ft_new_reminder(char *reminder);
+char	*ft_strjoin_gnl(char *reminder, char *buf);
 
 #endif
