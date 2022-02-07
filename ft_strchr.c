@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 19:12:27 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/01/23 22:31:03 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/07 13:28:39 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s != (char)c)
 		if (!*s++)
 			return (NULL);
