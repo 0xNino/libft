@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/07 14:26:35 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/09 23:19:47 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void	ft_loop(void);
 int		ft_abs(int a);
 int		ft_max(int a, int b);
 int		ft_min(int a, int b);
+int		ft_strchr_pos(const char *s, int c);
+int		ft_strrchr_pos(const char *s, int c);
 
 // GNL
 char	*get_next_line(int fd);

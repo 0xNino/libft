@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/07 13:41:58 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/09 23:20:21 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_putchar_fd.c ft_split.c \
 					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
 					ft_lstmap.c ft_lstnew.c ft_lstsize.c \
 					ft_intlen.c ft_putchar.c ft_putnbr.c ft_free_ptr.c ft_loop.c ft_abs.c \
+					ft_strchr_pos.c ft_strrchr_pos.c \
 					get_next_line.c
 
 OBJS			= $(SRCS:.c=.o)
