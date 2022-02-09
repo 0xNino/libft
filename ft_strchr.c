@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: 0xNino <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 19:12:27 by 0xNino           #+#    #+#             */
-/*   Updated: 2021/10/28 19:12:28 by 0xNino          ###   ########.fr       */
+/*   Created: 2021/10/28 19:12:27 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/02/07 13:28:39 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s != (char)c)
 		if (!*s++)
 			return (NULL);
