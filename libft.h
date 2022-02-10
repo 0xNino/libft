@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/09 23:19:47 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/10 10:28:19 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ int		ft_max(int a, int b);
 int		ft_min(int a, int b);
 int		ft_strchr_pos(const char *s, int c);
 int		ft_strrchr_pos(const char *s, int c);
+void	ft_free_arr(char **arr);
 
 // GNL
 char	*get_next_line(int fd);
