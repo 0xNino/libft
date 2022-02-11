@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 17:08:16 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/11 23:41:05 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,18 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 // dlst
-int		ft_dlisordered(t_dlist *dl, int (*f)(t_node *, t_node *));
-void	ft_printdlsti(t_dlist *dl, int rev, int (*f)(t_node *, t_node *));
-t_dlist	*ft_dlcpy(t_dlist *dl, void *(*f)(void *));
-t_dlist	*ft_dlnew(void);
-t_dlist	*ft_dladdfirst(t_dlist *dl, void *content);
-t_dlist	*ft_dladdlast(t_dlist *dl, void *content);
-void	*ft_dlgetcontent(t_dlist *dl, size_t i);
-void	ft_dlclear(t_dlist **dl);
-t_node	*ft_dlpushfirst(t_dlist *dl);
-t_node	*ft_dlpushlast(t_dlist *dl);
-t_dlist	*ft_dlputfirst(t_dlist *dl, t_node *node);
-t_dlist	*ft_dlputlast(t_dlist *dl, t_node *node);
+t_dlist	*ft_dlstadd_first(t_dlist *dlst, void *content);
+t_dlist	*ft_dlstadd_last(t_dlist *dlst, void *content);
+void	ft_dlstclear(t_dlist **dlst);
+void	*ft_dlstcontent(t_dlist *dlst, size_t i);
+t_dlist	*ft_dlstnew(void);
+t_node	*ft_dlstpushfirst(t_dlist *dlst);
+t_node	*ft_dlstpushlast(t_dlist *dlst);
+t_dlist	*ft_dlstputlast(t_dlist *dlst, t_node *node);
+t_dlist	*ft_dlstputfirst(t_dlist *dlst, t_node *node);
+void	ft_dlstprintint(t_dlist *dlst, int rev);
+int		ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *));
+t_dlist	*ft_dlststcpy(t_dlist *dlst, void *(*f)(void *));
 
 // gnl
 char	*get_next_line(int fd);

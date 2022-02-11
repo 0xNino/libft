@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/11 17:05:34 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/11 23:43:55 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,9 +28,16 @@ SRCS	=	additional/ft_itoa.c \
 			additional/ft_strrchr_pos.c \
 			additional/ft_strtrim.c \
 			additional/ft_substr.c \
-			dlst/ft_dlst.c \
 			dlst/ft_dlst_utils.c \
-			dlst/ft_dlstnode.c \
+			dlst/ft_dlstadd_first.c \
+			dlst/ft_dlstadd_last.c \
+			dlst/ft_dlstclear.c \
+			dlst/ft_dlstcontent.c \
+			dlst/ft_dlstnew.c \
+			dlst/ft_dlstpush_first.c \
+			dlst/ft_dlstpush_last.c \
+			dlst/ft_dlstput_first.c \
+			dlst/ft_dlstput_last.c \
 			gnl/get_next_line.c \
 			libc/ft_atoi.c \
 			libc/ft_bzero.c \
