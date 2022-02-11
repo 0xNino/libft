@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/11 15:37:00 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/11 16:24:43 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,14 @@ SRCS	=	additional/ft_itoa.c \
 			math/ft_abs.c \
 			math/ft_max.c \
 			math/ft_min.c \
+			printf/ft_hexlen.c \
+			printf/ft_htoc.c \
+			printf/ft_itoh.c \
+			printf/ft_printf.c \
+			printf/ft_putchar_len.c \
+			printf/ft_puthex_len.c \
+			printf/ft_putnbr_len.c \
+			printf/ft_putstr_len.c \
 			utils/ft_free_arr.c \
 			utils/ft_free_ptr.c \
 			utils/ft_intlen.c \

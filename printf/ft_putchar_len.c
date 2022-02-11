@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uintlen.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 14:17:19 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 16:27:12 by 0xNino           ###   ########.fr       */
+/*   Created: 2021/11/15 17:45:36 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/02/11 16:21:10 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "ft_printf.h"
 
-int	ft_uintlen(unsigned int n)
+int	ft_putchar_len(int c)
 {
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		i++;
-	while (n)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
+	write(1, &c, 1);
+	return (1);
 }
+/*
+int	main(void)
+{
+	int	len;
+
+	len = (int) ft_putchar_len('9');
+	printf("%i", len);
+}
+*/

@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uintlen.c                                       :+:      :+:    :+:   */
+/*   ft_hexlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 14:17:19 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 16:27:12 by 0xNino           ###   ########.fr       */
+/*   Created: 2021/11/16 17:19:17 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/02/11 16:33:42 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "ft_printf.h"
 
-int	ft_uintlen(unsigned int n)
+int	ft_hexlen(unsigned long n)
 {
 	int	i;
 
-	i = 0;
-	if (n == 0)
-		i++;
-	while (n)
+	i = 1;
+	while (n >= 16)
 	{
-		n /= 10;
+		n /= 16;
 		i++;
 	}
 	return (i);

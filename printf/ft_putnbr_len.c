@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_uintlen.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_len.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 14:17:19 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 16:27:12 by 0xNino           ###   ########.fr       */
+/*   Created: 2021/11/15 21:21:40 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/02/11 16:27:45 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "ft_printf.h"
 
-int	ft_uintlen(unsigned int n)
+int	ft_putnbr_len(int n, char specifier)
 {
-	int	i;
+	long	nbr;
 
-	i = 0;
-	if (n == 0)
-		i++;
-	while (n)
+	if (specifier == 'u')
+		nbr = (unsigned int) n;
+	else
+		nbr = n;
+	if (nbr < 0)
 	{
-		n /= 10;
-		i++;
+		ft_putchar('-');
+		nbr = -nbr;
 	}
-	return (i);
+	if (nbr >= 10)
+	{
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
+	}
+	else
+		ft_putchar(nbr + 48);
+	if (specifier == 'u')
+		return (ft_uintlen((unsigned int)n));
+	return (ft_intlen(n));
 }
