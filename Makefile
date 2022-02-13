@@ -6,11 +6,12 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/11 23:43:55 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/13 18:01:26 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	=	additional/ft_itoa.c \
+SRCS	=	additional/ft_isnumber.c \
+			additional/ft_itoa.c \
 			additional/ft_putchar.c \
 			additional/ft_putchar_fd.c \
 			additional/ft_putendl_fd.c \
