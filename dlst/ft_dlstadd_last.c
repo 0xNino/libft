@@ -6,13 +6,13 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 22:36:58 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 22:37:13 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/14 21:15:09 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-t_dlist	*ft_dlstaddlstast(t_dlist *dlst, void *content)
+t_dlist	*ft_dlstadd_last(t_dlist *dlst, void *content)
 {
 	t_node	*node;
 
