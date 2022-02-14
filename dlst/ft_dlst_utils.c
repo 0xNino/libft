@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:39:51 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 23:47:56 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/14 22:32:01 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *))
 	return (1);
 }
 
-void	ft_dlstprintint(t_dlist *dlst, int rev)
+void	ft_dlstprintint(t_dlist *dlst)
 {
 	t_node	*current;
 
@@ -39,21 +39,17 @@ void	ft_dlstprintint(t_dlist *dlst, int rev)
 	{
 		ft_printf("First node content : %i\n", *(int *)dlst->first->content);
 		ft_printf("Last node content  : %i\n", *(int *)dlst->last->content);
-		ft_printf("lst         : ");
+		ft_printf("lst : ");
 	}
 	current = dlst->first;
 	while (current)
 	{
-		ft_printf("%i ", *(int *)current->content);
+		ft_printf("%i", *(int *)current->content);
 		current = current->next;
-	}
-	if (dlst->size && rev)
-		ft_printf("\nreverse lst : ");
-	current = dlst->last;
-	while (current && rev)
-	{
-		ft_printf("%i ", *(int *)current->content);
-		current = current->prev;
+		if (current)
+			ft_printf(" ");
+		else
+			ft_printf("\n");
 	}
 }
 
