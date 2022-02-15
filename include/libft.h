@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/15 23:03:23 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/15 23:35:25 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <sys/types.h> 
 # include <sys/stat.h> 
 # include <fcntl.h>
+# include <limits.h>
 
 # define FT_INT_MIN			(-2147483648)
 # define FT_INT_MAX			(2147483647)

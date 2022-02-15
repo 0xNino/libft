@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 23:02:25 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/15 23:02:46 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/15 23:36:18 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ long	ft_atol(const char *str)
 			minus = 1;
 	while (ft_isdigit(*str))
 	{
-		if ((nbr > (FT_LONG_MAX - *str + '0') / 10) && minus)
-			return (0);
-		if ((nbr > (FT_LONG_MAX - *str + '0') / 10) && !minus)
-			return (-1);
+		if ((nbr > (LONG_MAX - *str + '0') / 10) && minus)
+			return (LONG_MIN);
+		if ((nbr > (LONG_MAX - *str + '0') / 10) && !minus)
+			return (LONG_MAX);
 		nbr = 10 * nbr + (*str - '0');
 		str++;
 	}
