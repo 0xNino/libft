@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/14 22:32:13 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/15 23:03:23 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ typedef struct s_dlist
 }	t_dlist;
 
 // additional
+long	ft_atol(const char *str);
 int		ft_isnumber(char *str);
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
