@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/17 20:23:18 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/17 21:00:53 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,10 +79,10 @@ t_dlist	*ft_dlstadd_last(t_dlist *dlst, void *content);
 void	ft_dlstclear(t_dlist **dlst);
 void	*ft_dlstcontent(t_dlist *dlst, size_t i);
 t_dlist	*ft_dlstnew(void);
-t_node	*ft_dlstpushfirst(t_dlist *dlst);
-t_node	*ft_dlstpushlast(t_dlist *dlst);
-t_dlist	*ft_dlstputlast(t_dlist *dlst, t_node *node);
-t_dlist	*ft_dlstputfirst(t_dlist *dlst, t_node *node);
+t_node	*ft_dlstpush_first(t_dlist *dlst);
+t_node	*ft_dlstpush_last(t_dlist *dlst);
+t_dlist	*ft_dlstput_last(t_dlist *dlst, t_node *node);
+t_dlist	*ft_dlstput_first(t_dlist *dlst, t_node *node);
 void	ft_dlstprintint(t_dlist *dlst);
 int		ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *));
 t_dlist	*ft_dlststcpy(t_dlist *dlst, void *(*f)(void *));
