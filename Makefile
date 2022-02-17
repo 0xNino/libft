@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/15 23:03:44 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/17 20:23:52 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ SRCS	=	additional/ft_atol.c \
 			libc/ft_memmove.c \
 			libc/ft_memset.c \
 			libc/ft_strchr.c \
+			libc/ft_strcmp.c \
 			libc/ft_strdup.c \
 			libc/ft_strlcat.c \
 			libc/ft_strlcpy.c \
