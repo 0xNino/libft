@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/17 20:23:52 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/18 21:13:13 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,10 +85,13 @@ SRCS	=	additional/ft_atol.c \
 			printf/ft_puthex_len.c \
 			printf/ft_putnbr_len.c \
 			printf/ft_putstr_len.c \
+			sort/ft_quicksort.c \
+			utils/ft_argv_to_i_arr.c \
 			utils/ft_free_arr.c \
 			utils/ft_free_ptr.c \
 			utils/ft_intlen.c \
 			utils/ft_loop.c \
+			utils/ft_swap_int.c \
 			utils/ft_uintlen.c \
 
 OBJS			= $(SRCS:.c=.o)

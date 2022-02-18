@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/17 21:00:53 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/18 21:16:55 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,11 +146,16 @@ int		ft_puthex_len(unsigned long n, int specifier);
 int		ft_putnbr_len(int n, char specifier);
 int		ft_putstr_len(char *s);
 
+// sort
+void	ft_quicksort(int *arr, int start, int end);
+
 // utils
+int		*ft_argv_to_i_arr(int argc, char **argv);
 void	ft_free_arr(char **arr);
 void	ft_free_ptr(void **ptr);
 int		ft_intlen(int n);
 void	ft_loop(void);
+void	ft_swap_int(int *a, int *b);
 int		ft_uintlen(unsigned int n);
 
 #endif
