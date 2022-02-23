@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:39:51 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/16 13:32:58 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/23 23:00:18 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,7 @@ void	ft_dlstprintint(t_dlist *dlst)
 
 	ft_printf("size of lst : %i \n", (int) dlst->size);
 	if (dlst->size)
-	{
-		ft_printf("First node content : [%i]\n", *(int *)dlst->first->content);
-		ft_printf("Last node content  : [%i]\n", *(int *)dlst->last->content);
 		ft_printf("lst : ");
-	}
 	current = dlst->first;
 	while (current)
 	{
