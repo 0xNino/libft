@@ -6,7 +6,7 @@
 #    By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/26 11:47:13 by 0xNino            #+#    #+#              #
-#    Updated: 2022/02/18 21:13:13 by 0xNino           ###   ########.fr        #
+#    Updated: 2022/02/23 16:13:13 by 0xNino           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,7 @@ SRCS	=	additional/ft_atol.c \
 			utils/ft_free_ptr.c \
 			utils/ft_intlen.c \
 			utils/ft_loop.c \
+			utils/ft_print_i_arr.c \
 			utils/ft_swap_int.c \
 			utils/ft_uintlen.c \
 
