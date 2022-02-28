@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 16:39:51 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/23 23:00:18 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/28 15:46:15 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int	ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *))
 	return (1);
 }
 
-void	ft_dlstprintint(t_dlist *dlst)
+void	ft_dlstprintint(t_dlist *dlst, char *name)
 {
 	t_node	*current;
 
-	ft_printf("size of lst : %i \n", (int) dlst->size);
-	if (dlst->size)
-		ft_printf("lst : ");
+	ft_printf("lst size = %i\t%s : ", (int) dlst->size, name);
+	if (!dlst->size)
+		ft_printf("\n");
 	current = dlst->first;
 	while (current)
 	{

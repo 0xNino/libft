@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/28 15:12:24 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/02/28 15:48:53 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ t_node	*ft_dlstpush_first(t_dlist *dlst);
 t_node	*ft_dlstpush_last(t_dlist *dlst);
 t_dlist	*ft_dlstput_last(t_dlist *dlst, t_node *node);
 t_dlist	*ft_dlstput_first(t_dlist *dlst, t_node *node);
-void	ft_dlstprintint(t_dlist *dlst);
+void	ft_dlstprintint(t_dlist *dlst, char *name);
 int		ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *));
 t_dlist	*ft_dlststcpy(t_dlist *dlst, void *(*f)(void *));
 
@@ -157,6 +157,6 @@ int		ft_intlen(int n);
 void	ft_loop(void);
 void	ft_swap_int(int *a, int *b);
 int		ft_uintlen(unsigned int n);
-void	ft_print_i_arr(int *i_arr, int size);
+void	ft_print_i_arr(int *i_arr, int size, char *name);
 
 #endif
