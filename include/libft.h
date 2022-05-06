@@ -6,7 +6,7 @@
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 11:32:34 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/28 15:48:53 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/05/06 03:19:05 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,11 @@ void	ft_putnbr(int n);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putstr(char *s);
 char	**ft_split(char const *s, char c);
-int		ft_strchr_pos(const char *s, int c);
+int		ft_strchr_pos(const char *s, const char *set);
+char	*ft_strchr_set(const char *str, const char *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin_variadic(unsigned int arg_count, ...);
+char	*ft_strjoin_variadic2(unsigned int arg_count, ...);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strrchr_pos(const char *s, int c);
@@ -86,6 +88,7 @@ t_dlist	*ft_dlstput_first(t_dlist *dlst, t_node *node);
 void	ft_dlstprintint(t_dlist *dlst, char *name);
 int		ft_dlstisordered(t_dlist *dlst, int (*f)(t_node *, t_node *));
 t_dlist	*ft_dlststcpy(t_dlist *dlst, void *(*f)(void *));
+void	ft_dlstunlink(t_node *node, t_dlist *dlst);
 
 // gnl
 char	*get_next_line(int fd);
@@ -114,6 +117,7 @@ char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *str);
+char	*ft_strndup(char *s, int n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
@@ -151,10 +155,15 @@ void	ft_quicksort(int *arr, int start, int end);
 
 // utils
 int		*ft_argv_to_i_arr(int argc, char **argv);
-void	ft_free_arr(char **arr);
+void	ft_free_double_ptr(void ***ptr);
+void	ft_free_matrix(char ***matrix);
 void	ft_free_ptr(void **ptr);
 int		ft_intlen(int n);
 void	ft_loop(void);
+char	**ft_matrixcat(char **matrix, char *str);
+char	**ft_matrixdup(char **matrix);
+size_t	ft_matrixlen(char **matrix);
+void	ft_matrixprint(char **matrix, int len, int fd);
 void	ft_swap_int(int *a, int *b);
 int		ft_uintlen(unsigned int n);
 void	ft_print_i_arr(int *i_arr, int size, char *name);

@@ -1,42 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_matrixdup.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 16:29:21 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 15:42:24 by 0xNino           ###   ########.fr       */
+/*   Created: 2022/05/04 15:21:34 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/05/04 23:14:14 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	**ft_matrixdup(char **matrix)
 {
-	char	*sub;
+	char	**dup;
+	int		len;
+	int		i;
 
-	if (!s)
+	i = 0;
+	len = ft_matrixlen(matrix);
+	if (len <= 0)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	dup = (char **) ft_calloc(len + 1, sizeof(char *));
+	if (!dup)
+		return (NULL);
+	while (matrix[i])
 	{
-		sub = ft_calloc(1, sizeof(char));
-		if (!sub)
+		dup[i] = ft_strdup(matrix[i]);
+		if (!dup[i])
+		{
+			ft_free_matrix(&dup);
 			return (NULL);
-		return (sub);
+		}
+		i++;
 	}
-	if (len > ft_strlen(s))
-	{
-		sub = (char *) ft_calloc(ft_strlen(s) + 1, sizeof(char));
-		if (!sub)
-			return (NULL);
-	}
-	else
-	{
-		sub = (char *)ft_calloc(len + 1, sizeof(char));
-		if (!sub)
-			return (NULL);
-	}
-	ft_strlcpy(sub, s + start, len + 1);
-	return (sub);
+	dup[i] = NULL;
+	return (dup);
 }

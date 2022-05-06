@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_arr.c                                      :+:      :+:    :+:   */
+/*   ft_free_double_ptr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:28:01 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 15:42:24 by 0xNino           ###   ########.fr       */
+/*   Updated: 2022/04/04 11:40:29 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_free_arr(char **arr)
+void	ft_free_double_ptr(void ***ptr)
 {
-	int	i;
+	void	**tmp;
 
-	i = 0;
-	while (arr[i])
+	if (*ptr)
 	{
-		if (arr[i])
+		tmp = *ptr;
+		while (*tmp)
 		{
-			free(arr[i]);
-			arr[i] = NULL;
+			ft_free_ptr(tmp);
+			tmp++;
 		}
-		i++;
+		free(*ptr);
+		*ptr = NULL;
 	}
-	free(arr);
-	arr = NULL;
 }

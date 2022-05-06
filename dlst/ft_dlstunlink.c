@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstclear.c                                     :+:      :+:    :+:   */
+/*   ft_dlstunlink.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vheran <vheran@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/11 22:39:15 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/04/12 10:09:03 by vheran           ###   ########.fr       */
+/*   Created: 2022/04/12 08:45:47 by vheran            #+#    #+#             */
+/*   Updated: 2022/04/12 10:12:32 by vheran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_dlstclear(t_dlist **dlst)
+void	ft_dlstunlink(t_node *node, t_dlist *dlst)
 {
-	t_node	*current;
+	t_node	*prev;
 	t_node	*next;
 
-	if (!*dlst)
-		return ;
-	current = (*dlst)->first;
-	if (current)
+	prev = node->prev;
+	next = node->next;
+	if (prev)
+		prev->next = next;
+	if (next)
+		next->prev = prev;
+	if (node)
 	{
-		next = current->next;
-		free(current->content);
-		free(current);
-		current = next;
-	}	
-	while (current && current != (*dlst)->first)
-	{
-		next = current->next;
-		free(current->content);
-		free(current);
-		current = next;
+		dlst->size--;
+		free(node->content);
+		free(node);
 	}
-	free(*dlst);
-	*dlst = NULL;
 }
