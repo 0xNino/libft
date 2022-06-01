@@ -1,3 +1,5 @@
+libft.a
+
 # Prerequisites
 *.d
 
@@ -51,6 +53,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# Miscellaneous
-.DS_Store
-.vscode
+src/main_test_vh.c

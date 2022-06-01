@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_pos.c                                    :+:      :+:    :+:   */
+/*   ft_matrixlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: 0xNino <marvin@42lausanne.ch>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/09 23:13:55 by 0xNino            #+#    #+#             */
-/*   Updated: 2022/02/11 15:42:24 by 0xNino           ###   ########.fr       */
+/*   Created: 2022/04/25 17:20:51 by 0xNino            #+#    #+#             */
+/*   Updated: 2022/05/04 15:22:49 by 0xNino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 /*
-Find the first occurence of any character from the string set inside
-the string s and returns its position.
-*/
-int	ft_strchr_pos(const char *s, const char *set)
-{
-	int	i;
-	int	j;
+DESCRIPTION
+The ft_matrixlen() function computes the length of the 2D matrix.
 
-	i = 0;
-	j = 0;
-	if (!s || !set)
-		return (-1);
-	while (s[i])
-	{
-		j = 0;
-		while (set[j])
-			if (s[i] == set[j++])
-				return (i);
-		i++;
-	}
-	return (-1);
+/!\ Only use with initialized memory (ft_calloc).
+
+RETURN VALUES
+The ft_matrixlen() function returns the number of characters that precede the
+terminating NUL character.
+*/
+size_t	ft_matrixlen(char **matrix)
+{
+	size_t	len;
+
+	len = 0;
+	while (matrix && matrix[len])
+		len++;
+	return (len);
 }
